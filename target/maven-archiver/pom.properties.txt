@@ -1,0 +1,3 @@
+artifactId=drill
+groupId=com.drill
+version=0.0.1-SNAPSHOT
