@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head> 
+    <meta charset="UTF-8">
+    <title>Каталог</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" href="images/icon/favicon.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Pacifico%7CSource+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;amp;subset=latin-ext,vietnamese" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/animate/animated.css">
+    <link rel="stylesheet" type="text/css" href="libs/owl.carousel.min/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/jquery.mmenu.all/jquery.mmenu.all.css">
+    <link rel="stylesheet" type="text/css" href="libs/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" type="text/css" href="libs/direction/css/noJS.css">
+    <link rel="stylesheet" type="text/css" href="libs/prettyphoto-master/css/prettyPhoto.css">
+    <link rel="stylesheet" type="text/css" href="libs/slick-sider/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/countdown-timer/css/demo.css">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+
+  </head>
+  <body class="products products-list" style="background-color: #131313">
+    <div id="preloaderKDZ"></div>
+    <div class="yolo-site">
+      <header th:insert="blocks/header :: header"></header>
+      <div id="example-wrapper">
+        <div class="div-box mb">
+          <div class="banner-subpage">
+            <figure><img src="images/background/bg-banner.jpg" alt="bg-banner"/></figure>
+            <div class="banner-subpage-content">
+              <h2>Каталог</h2>
+            </div>
+          </div>
+        </div>
+        <div class="div-box mb">
+          <div class="container">
+            <div class="col-md-9">
+              <div class="product-wrap-list">
+                <div class="product-style_5 mb" th:each="el : ${posts}">
+                  <div class="product-item-inner row mg-0">
+                    <div class="col-sm-4 col-xs-12 pd-0" th:href="'/product/' + ${el.id}">
+                      <div class="product-thumb" th:href="'/product/' + ${el.id}">
+                        <div class="product-thumb-primary"><img th:src="${el.image}" alt="product1" width="375" height="450" class="attachment-shop_catalog size-shop_catalog wp-post-image"/></div><a href="#" class="product-link">
+                          <div class="product-hover-sign">
+                            <hr/>
+                            <hr/>
+                          </div></a>
+                      </div>
+                    </div>
+                    <div class="col-sm-8 col-xs-12 pd-0">
+                      <div class="product-info"><a th:href="'/product/' + ${el.id}">
+                          <h3 th:text="${el.title}"/></a>
+                        <div class="div-rate mb-20">
+                          <div class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></div><span class="price"><span class="product-begreen-price-amount amount"><a>$</a><span class="product-begreen-price-currencysymbol" th:text="${el.cost}"></span></span></span>
+                        </div>
+                        <div class="product-single-short-description mb-20">
+                          <p th:text="${el.full_text}"/>
+                        </div>
+                        <div class="product-actions">
+                          <div class="add-to-cart-wrap"><a href="#" class="add_to_cart_button"><i class="fa fa-cart-plus"></i> Добавить в корзину</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pagination-style-2">
+                <div class="pagination-list">
+                  <div class="page active">1</div>
+                  <div class="page">2</div>
+                  <div class="page"><i class="fa fa-angle-double-right"> </i></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="sidebar sidebar-product">
+                <aside class="mb-45 search-sidebar">
+                  <h2 class="text-center mb-20">Поиск</h2>
+                  <form class="form-input">
+                    <input type="text" placeholder="Search here..."/><a href="#"><i class="fa fa-search"></i></a>
+                  </form>
+                </aside>
+                <aside class="mb-45 categories">
+                  <h2 class="text-center mb-20">Категории</h2>
+                  <ul class="cat-list">
+                    <li><a href="#">Awesome</a></li>
+                    <li><a href="#">Cactus</a></li>
+                    <li><a href="#">Featured</a></li>
+                    <li><a href="#">Indoor</a></li>
+                    <li><a href="#">New</a></li>
+                    <li><a href="#">Outdoor</a></li>
+                    <li><a href="#">Pots</a></li>
+                    <li><a href="#">Seeds</a></li>
+                  </ul>
+                </aside>
+                <aside class="mb-45 follow-me">
+                  <h2 class="text-center mb-20">Будь в курсе</h2>
+                  <ul class="social-profile text-center">
+                    <li><a title="Facebook" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a title="Twitter" href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li><a title="Pinterest" href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                    <li><a title="GooglePlus" href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a title="Vimeo" href="#" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>
+                    <li><a title="Instagram" href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a title="Linkedin" href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a title="Rss" href="#" target="_blank"><i class="fa fa-rss"></i></a></li>
+                    <li><a title="Youtube" href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                  </ul>
+                </aside>
+                <aside class="mb-45 ad-pot">
+                  <h2 class="text-center mb-20">Место для рекламы</h2>
+                  <figure><img src="images/demo/ad.jpg" alt="ad"/></figure>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div th:insert="blocks/footer :: footer"></div>
+
+      </div>
+    </div>
+
+    <div class="popup-wrapper">
+    </div>
+
+    <div class="click-back-top-body">
+      <button type="button" class="sn-btn sn-btn-style-17 sn-back-to-top fixed-right-bottom"><i class="btn-icon fa fa-angle-up"></i></button>
+    </div>
+
+
+    <script type="text/javascript" src="libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="libs/animate/wow.min.js"></script>
+    <script type="text/javascript" src="libs/jquery.mmenu.all/jquery.mmenu.all.min.js"></script>
+    <script type="text/javascript" src="libs/countdown/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="libs/jquery-appear/jquery.appear.min.js"></script>
+    <script type="text/javascript" src="libs/jquery-countto/jquery.countTo.min.js"></script>
+    <script type="text/javascript" src="libs/direction/js/jquery.hoverdir.js"></script>
+    <script type="text/javascript" src="libs/direction/js/modernizr.custom.97074.js"></script>
+    <script type="text/javascript" src="libs/isotope/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="libs/isotope/fit-columns.js"></script>
+    <script type="text/javascript" src="libs/isotope/isotope-docs.min.js"></script>
+    <script type="text/javascript" src="libs/mansory/mansory.js"></script>
+    <script type="text/javascript" src="libs/prettyphoto-master/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="libs/slick-sider/slick.min.js"></script>
+    <script type="text/javascript" src="libs/countdown-timer/js/jquery.final-countdown.min.js"></script>
+    <script type="text/javascript" src="libs/countdown-timer/js/kinetic.js"></script>
+    <script type="text/javascript" src="libs/owl.carousel.min/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

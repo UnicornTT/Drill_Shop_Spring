@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <title>Drill Shop Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" href="images/icon/favicon.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Pacifico%7CSource+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;amp;subset=latin-ext,vietnamese" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/animate/animated.css">
+    <link rel="stylesheet" type="text/css" href="libs/owl.carousel.min/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/jquery.mmenu.all/jquery.mmenu.all.css">
+    <link rel="stylesheet" type="text/css" href="libs/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" type="text/css" href="libs/direction/css/noJS.css">
+    <link rel="stylesheet" type="text/css" href="libs/prettyphoto-master/css/prettyPhoto.css">
+    <link rel="stylesheet" type="text/css" href="libs/slick-sider/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/countdown-timer/css/demo.css">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+
+  </head>
+  <body class="home planter-shop-home" style="background-color: #131313">
+    <div id="preloaderKDZ"></div>
+    <div class="yolo-site">
+      <header th:insert="blocks/header :: header"></header>
+      <div id="example-wrapper">
+        <div class="div-box" style="margin-bottom: 75px">
+          <div class="slider-home slider-home-2">
+            <div data-number="1" data-margin="100" data-loop="yes" data-navcontrol="yes" class="begreen-owl-carousel">
+              <div class="slider-1">
+                <div class="slider-content slider-1-content" style="color : #94da46">
+                  <h2>Лучший магазин, специализирующийся на дрелях</h2>
+                  <p>У нас за плечами огромный двухдневный опыт<br/>продажи дрелей</p>
+                </div>
+              </div>
+              <div class="slider-2">
+                <div class="slider-content slider-2-content" style="color : #94da46">
+                  <h2>Акция!!!</h2>
+                  <p>Купи одну дрель и получии скидку 25% на вторую</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div-box mb">
+          <div class="yolo-video-player style_2">
+            <div class="yl-button-play yolo-container">
+              <div class="container-text container">
+                <p data-height="550" data-video="https://vimeo.com/229569935" class="play-button"><i class="fa fa-play-circle-o"></i></p>
+                <div class="yl-description">Лучшее качество за справедливую цену</div>
+                <h1 class="yl-introduction">Добро пожаловать в Drill Shop</h1>
+              </div>
+            </div>
+            <div class="iframe-video-player">
+              <p class="video-close">X</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div-box mt mb">
+          <div class="home-2-coundown text-center">
+            <div class="home-2-coundown-content container">
+              <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                  <h2 class="title-style title-style-1 font-68"><span class="title-left">Специальное </span><span class="title-right" style="color: #ffffff">Предложение</span></h2>
+                  <div class="desc" style="color: #ffffff">Сэконось <b>25%!!!!</b> Купи <b>одну</b> дрель и получи скидку на <b>ВТОРУЮ!</b></div>
+                  <div class="countdown countdown-container">
+                    <div class="clock row">
+                      <div class="clock-item clock-days countdown-time-value col-sm-3 col-md-3 col-xs-6">
+                        <div class="wrap">
+                          <div class="inner">
+                            <div id="canvas-days" class="clock-canvas"></div>
+                            <div class="text" style="color: #ffffff">
+                              <p class="val">0</p>
+                              <p class="type-days type-time">Days</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clock-item clock-hours countdown-time-value col-sm-3 col-md-3 col-xs-6">
+                        <div class="wrap">
+                          <div class="inner">
+                            <div id="canvas-hours" class="clock-canvas"></div>
+                            <div class="text" style="color: #ffffff">
+                              <p class="val">0</p>
+                              <p class="type-hours type-time">Hour</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clock-item clock-minutes countdown-time-value col-sm-3 col-md-3 col-xs-6">
+                        <div class="wrap">
+                          <div class="inner">
+                            <div id="canvas-minutes" class="clock-canvas"></div>
+                            <div class="text" style="color: #ffffff">
+                              <p class="val">0</p>
+                              <p class="type-minutes type-time">Minutes</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clock-item clock-seconds countdown-time-value col-sm-3 col-md-3 col-xs-6">
+                        <div class="wrap">
+                          <div class="inner">
+                            <div id="canvas-seconds" class="clock-canvas"></div>
+                            <div class="text" style="color: #ffffff">
+                              <p class="val">0</p>
+                              <p class="type-seconds type-time">Seconds</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p><a href="/product-list" class="btn btn-12">PURCHASE NOW</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div th:insert="blocks/footer :: footer"></div>
+
+      </div>
+    </div>
+
+    <div class="popup-wrapper">
+    </div>
+
+    <div class="click-back-top-body">
+      <button type="button" class="sn-btn sn-btn-style-17 sn-back-to-top fixed-right-bottom"><i class="btn-icon fa fa-angle-up"></i></button>
+    </div>
+
+    <script type="text/javascript" src="libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="libs/animate/wow.min.js"></script>
+    <script type="text/javascript" src="libs/jquery.mmenu.all/jquery.mmenu.all.min.js"></script>
+    <script type="text/javascript" src="libs/countdown/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="libs/jquery-appear/jquery.appear.min.js"></script>
+    <script type="text/javascript" src="libs/jquery-countto/jquery.countTo.min.js"></script>
+    <script type="text/javascript" src="libs/direction/js/jquery.hoverdir.js"></script>
+    <script type="text/javascript" src="libs/direction/js/modernizr.custom.97074.js"></script>
+    <script type="text/javascript" src="libs/isotope/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="libs/isotope/fit-columns.js"></script>
+    <script type="text/javascript" src="libs/isotope/isotope-docs.min.js"></script>
+    <script type="text/javascript" src="libs/mansory/mansory.js"></script>
+    <script type="text/javascript" src="libs/prettyphoto-master/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="libs/slick-sider/slick.min.js"></script>
+    <script type="text/javascript" src="libs/countdown-timer/js/jquery.final-countdown.min.js"></script>
+    <script type="text/javascript" src="libs/countdown-timer/js/kinetic.js"></script>
+    <script type="text/javascript" src="libs/owl.carousel.min/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
